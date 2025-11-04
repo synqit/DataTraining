@@ -1,0 +1,31 @@
+
+**Doelarchitectuur**
+- `/raw` → originele brondata  
+- `/clean` → gepseudonimiseerde data  
+- `/anonymous` → volledig geanonimiseerde dataset  
+- `/trash` → verwijderde of verlopen data  
+
+---
+
+## ⚙️ Prerequisites
+
+- Azure Subscription + Contributor rechten  
+- Resource Group: `rg-data-privacy-westeurope`  
+- Region: West Europe  
+- Managed Identities ingeschakeld voor ADF & Databricks  
+- (Optioneel) Private Endpoints voor Storage, Key Vault, Databricks  
+
+---
+
+## 📦 Naamgeving & variabelen
+
+| Component | Naamvoorbeeld | Opmerking |
+|------------|----------------|-----------|
+| Storage Account | `st<uniek>dataweu` | ADLS Gen2 met HNS = On |
+| Container | `datalake` | |
+| Key Vault | `kv-privacy-weu` | bevat secret `hash-salt` |
+| Data Factory | `adf-privacy-weu` | |
+| Databricks Workspace | `dbw-privacy-weu` | |
+| Purview Account | `pvw-privacy-weu` | |
+
+**Data Lake structuur**
