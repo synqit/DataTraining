@@ -29,3 +29,8 @@
 | Purview Account | `pvw-privacy-weu` | |
 
 **Data Lake structuur**
+
+/raw
+/clean
+/anonymous
+/trash
